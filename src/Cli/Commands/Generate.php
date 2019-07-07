@@ -2,11 +2,11 @@
 
 namespace PHPSchema\Cli\Commands;
 
-class Create implements \PHPSchema\Interfaces\Command
+class Generate implements \PHPSchema\Interfaces\Command
 {
 	public static function getName(): string
 	{
-		return 'create';
+		return 'generate';
 	}
 
 	public static function getDescription(): string
@@ -28,7 +28,12 @@ class Create implements \PHPSchema\Interfaces\Command
 		$dir = 'migrations/' . time() . "_$migrationName";
 		mkdir($dir);
 
-		touch($dir . "/up.sql");
-		touch($dir . "/down.sql");
+		$file = $dir . "/up.sql";
+		touch($file);
+		echo "Created $file\n";
+
+		$file = $dir . "/down.sql";
+		touch($file);
+		echo "Created $file\n";
 	}
 }

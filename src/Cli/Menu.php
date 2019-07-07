@@ -5,7 +5,7 @@ namespace PHPSchema\Cli;
 class Menu
 {
 	const COMMANDS = [
-		\PHPSchema\Cli\Commands\Create::class,
+		\PHPSchema\Cli\Commands\Generate::class,
 		\PHPSchema\Cli\Commands\Migrate::class,
 	];
 
