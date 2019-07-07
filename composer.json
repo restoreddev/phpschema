@@ -1,0 +1,19 @@
+{
+    "name": "restoreddev/phpschema",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrew Davis",
+            "email": "andrew@restoredsoftware.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPSchema\\": "src/"
+        }
+    }
+}
